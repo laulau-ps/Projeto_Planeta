@@ -1,0 +1,163 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: "Poppins";
+}
+
+body {
+    background: linear-gradient(270deg, #87eff6 0%, #ffffff 100%);
+}
+
+header {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    height: 110;
+    justify-content: space-between;
+    padding: 40px 80px;
+
+    & .menu {
+        display: none;
+    }
+
+    & nav {
+        display: flex;
+        gap: 50px;
+        width: 449;
+        height: 21;
+
+        & a {
+            font-weight: 400;
+            font-size: 14px;
+            text-decoration: none;
+            color: black;
+        }
+    }
+}
+
+main {
+    width: 100%;
+    height: 100%;
+    justify-content: space-between;
+    align-items: center;
+    padding: 40px 80px;
+    display: flex;
+
+    & .left-side {
+        display: flex;
+        flex-direction: column;
+        gap: 58px;
+        width: 604px;
+
+        & .content {
+            gap: 16px;
+
+            & h2 {
+                font-weight: 600;
+                font-size: 24px;
+                color: #ff2323;
+            }
+
+            & h1 {
+                font-weight: 800;
+                font-size: 40px;
+            }
+
+            & h3 {
+                font-weight: 400;
+                font-size: 18px;
+            }
+        }
+
+        & .buttons {
+            display: flex;
+            gap: 16px;
+
+            & a {
+                text-decoration: none;
+            }
+
+            & .btn-1 {
+                width: fit-content;
+                height: 55px;
+                padding: 14px 20px;
+                gap: 10px;
+                border-radius: 16px;
+                background: #4abbc2;
+                color: black;
+                font-weight: 700;
+                font-size: 18px;
+            }
+
+            & .btn-2 {
+                width: fit-content;
+                height: 55;
+                padding: 14px 20px;
+                gap: 10px;
+                border-radius: 16px;
+                border: 2px solid #4ABBC2;
+                font-family: Poppins;
+                font-weight: 700;
+                font-size: 18px;
+                text-decoration: none;
+                color: #4ABBC2;
+            }
+        }
+    }
+}
+
+/*responsividade*/
+
+@media screen and (max-width: 430px) {
+
+    body {
+        background: linear-gradient(180deg, #FFFFFF 0%, #87EFF6 100%);
+
+    }
+
+    header {
+        padding: 20px 10px;
+
+        & nav {
+            display: none;
+        }
+
+        & .menu {
+            display: block;
+        }
+
+        & .logo {
+            width: 118px;
+            height: 30px;
+        }
+    }
+
+    main {
+        padding: 40px 10px;
+        flex-direction: column;
+
+        & .left-side {
+            display: flex;
+            flex-direction: column;
+            gap: 58px;
+            width: 410px;
+
+            & .content {
+
+                & h1 {
+                    font-size: 32px;
+                }
+            }
+
+        }
+
+        .right-side {
+            & img {
+                width: 409px;
+                height: 326px;
+            }
+        }
+    }
+
+}
